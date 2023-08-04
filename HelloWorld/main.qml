@@ -10,8 +10,9 @@ Window {
 
     Image {
         id: sitenow
+        objectName: "sitenow"
         x: 200
-        source: imagePath
+        source: 'Images/sitenow001.png'
     }
 
 

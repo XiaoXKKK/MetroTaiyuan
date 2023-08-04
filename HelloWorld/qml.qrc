@@ -26,5 +26,6 @@
         <file>Images/sitenow022.png</file>
         <file>Images/sitenow023.png</file>
         <file>Images/sitenow024.png</file>
+        <file>new.qml</file>
     </qresource>
 </RCC>
