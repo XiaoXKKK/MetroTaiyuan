@@ -1,8 +1,5 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <QDebug>
-#include <QQmlContext>
-#include <QQuickItem>
 
 int main(int argc, char *argv[])
 {
@@ -19,22 +16,5 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
     engine.load(url);
 
-    
-    QObject *rootObject = engine.rootObjects().first();
-    qDebug() << "rootObject:" << rootObject;
-    QQuickItem *sitenow = rootObject->findChild<QQuickItem*>("sitenow");
-    
-    if (sitenow) {
-        qDebug() << "sitenow:" << sitenow;
-        sitenow->setProperty("source", "qrc:///Images/sitenow002.png");
-    }
-//    sitenow->setProperty("source", "Images/sitenow002.png");
-    // testDynamicProperty();
-
     return app.exec();
 }
-
-// 下一站：
-
-// 中文
-// English
