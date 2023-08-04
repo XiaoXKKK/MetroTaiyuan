@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>rail.png</file>
+        <file>Images/sitenow001.png</file>
+        <file>Images/sitenow002.png</file>
+        <file>Images/sitenow003.png</file>
+        <file>Images/sitenow004.png</file>
+        <file>Images/sitenow005.png</file>
+        <file>Images/sitenow006.png</file>
+        <file>Images/sitenow007.png</file>
+        <file>Images/sitenow008.png</file>
+        <file>Images/sitenow009.png</file>
+        <file>Images/sitenow010.png</file>
+        <file>Images/sitenow011.png</file>
+        <file>Images/sitenow012.png</file>
+        <file>Images/sitenow013.png</file>
+        <file>Images/sitenow014.png</file>
+        <file>Images/sitenow015.png</file>
+        <file>Images/sitenow016.png</file>
+        <file>Images/sitenow017.png</file>
+        <file>Images/sitenow018.png</file>
+        <file>Images/sitenow019.png</file>
+        <file>Images/sitenow020.png</file>
+        <file>Images/sitenow021.png</file>
+        <file>Images/sitenow022.png</file>
+        <file>Images/sitenow023.png</file>
+        <file>Images/sitenow024.png</file>
+    </qresource>
+</RCC>
