@@ -47,5 +47,6 @@
         <file>Images/tts-opendoorr.gif</file>
         <file>Header.qml</file>
         <file>HorizontalText.qml</file>
+        <file>VerticalText.qml</file>
     </qresource>
 </RCC>
