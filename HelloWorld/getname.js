@@ -1,0 +1,40 @@
+var data = `1西山矿务局站Xishan Mining Bureau Station
+2西铭路站Xi Ming Road station
+3客运西站Passenger West Station
+4金阳路站Jinyang Road Station
+5小井峪站 Xiaojingyu Station
+6下元站 Xiayuan Station
+7迎泽西站 Yingze West Station
+8桃园路站Taoyuan Road Station
+9大南门站Da Nan Men Station
+10柳巷南站Liuxiang South Station
+11五一广场站WuYi Square Station
+12建设北路南站Jianshe North Road South Station
+13太原站东广场站Taiyuan Station East Square Station
+14迎泽东大街站Yingze East Street Station
+15朝阳街站Chaoyang Street Station
+16南内环东街站South Inner Ring East Street Station
+17东太堡站Dongtaibao Station
+18长风东街站Changfeng East Street Station
+19学府街东口站Xuefu Street Dongkou Station
+20省农科院站Provincial Academy of Agricultural Sciences Station
+21太原南站Taiyuan South Station
+22中心街东站Central Street East Station
+23龙城大街东站 Longcheng Street East Station
+24武宿机场站Wusu Airport Station`;
+
+var regex = /^(\d+)([\u4e00-\u9fa5]+)\/?([a-zA-Z\s]+)?$/gm;
+var chineseStations = [];
+var englishStations = [];
+
+var match;
+while ((match = regex.exec(data)) !== null) {
+    var id = match[1];
+    var chineseName = match[2];
+    var englishName = match[3] || "";
+    chineseStations.push(chineseName);
+    englishStations.push(englishName.trim());
+}
+
+console.log(chineseStations);
+console.log(englishStations);
