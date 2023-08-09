@@ -1,0 +1,26 @@
+<Line1Stations>
+  <STANOD ID="1" major="西山矿务局站"/>
+  <STANOD ID="2" major="西铭路站"/>
+  <STANOD ID="3" major="客运西站"/>
+  <STANOD ID="4" major="金阳路站"/>
+  <STANOD ID="5" major="小井峪站"/>
+  <STANOD ID="6" major="下元站"/>
+  <STANOD ID="7" major="迎泽西站"/>
+  <STANOD ID="8" major="桃园路站"/>
+  <STANOD ID="9" major="大南门站"/>
+  <STANOD ID="10" major="柳巷南站"/>
+  <STANOD ID="11" major="五一广场站"/>
+  <STANOD ID="12" major="建设北路南站"/>
+  <STANOD ID="13" major="太原站东广场站"/>
+  <STANOD ID="14" major="迎泽东大街站"/>
+  <STANOD ID="15" major="朝阳街站"/>
+  <STANOD ID="16" major="南内环东街站"/>
+  <STANOD ID="17" major="东太堡站"/>
+  <STANOD ID="18" major="长风东街站"/>
+  <STANOD ID="19" major="学府街东口站"/>
+  <STANOD ID="20" major="省农科院站"/>
+  <STANOD ID="21" major="太原南站"/>
+  <STANOD ID="22" major="中心街东站"/>
+  <STANOD ID="23" major="龙城大街东站"/>
+  <STANOD ID="24" major="武宿机场站"/>
+</Line1Stations>

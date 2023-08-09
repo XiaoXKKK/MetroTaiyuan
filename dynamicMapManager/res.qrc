@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/xml">
+        <file>line6.xml</file>
+        <file>line8.xml</file>
+        <file>taiyuan_line1.xml</file>
+    </qresource>
+</RCC>
