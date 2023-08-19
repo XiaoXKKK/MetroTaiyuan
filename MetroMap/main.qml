@@ -41,7 +41,6 @@ Window {
                     allstation.sites[i].source = "Images/statenorun.png"
                     continue;
                 }
-
                 if(i < next){
                     allstation.names[i].disable();
                     allstation.rails[i].source = "Images/railpass.png"
@@ -56,14 +55,18 @@ Window {
                 if(i === now){
                     allstation.rails[i].source = "Images/railnext.png"
                     allstation.sites[i].source = "Images/statenow.png"
+                    allstation.arrow.x = i * 77 + 100;
+                }
+                if(pass >> i & 1){
+                    allstation.sites[i].source = "Images/statenorun.png"
+                    allstation.names[i].disable();
                 }
             }
-
+//            console.log(typeof pass)
             allstation.header.updateStart(start)
             allstation.header.updateEnd(end)
             allstation.header.updateNext(next)
             allstation.header.updateDoor(door)
-            console.log(start)
         }
 
         Component.onCompleted: {

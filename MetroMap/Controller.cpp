@@ -65,6 +65,9 @@ void Controller::ReadReceive()
     quint8 flag = _packet.dataSegment.flagSwitch;
     _door = (DynamicmapIp[0].contains(LocalAddress) && ((flag>>5)&1)) || (DynamicmapIp[1].contains(LocalAddress) && ((flag>>4)&1));
     _direction = ((flag>>7)&1);
+    _pass = 0;
+    memcpy(&_pass, _packet.dataSegment.flagPassStation, 6);
+//    qDebug()<<"pass="<<_pass;
     // bit0:越站有效 bit3:上下行有效 bit4:开右侧门 bit5:开左侧门 bit6:下行 bit7:上行
     emit dataChanged();
 }

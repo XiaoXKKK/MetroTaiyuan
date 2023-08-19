@@ -17,6 +17,7 @@ public:
     Q_PROPERTY(int next MEMBER _next)
     Q_PROPERTY(bool door MEMBER _door)
     Q_PROPERTY(bool direction MEMBER _direction)
+    Q_PROPERTY(int pass MEMBER _pass)
 private:
     QString LocalAddress;
     QStringList DynamicmapIp[2];
@@ -30,6 +31,7 @@ private:
     int _next;
     bool _door;
     bool _direction;
+    unsigned long long _pass;
 signals:
     void dataChanged();
 private slots:

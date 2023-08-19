@@ -15,6 +15,15 @@ Item {
     property var rails: []
     property var sites: []
 
+    property AnimatedImage arrow: _arrow
+    AnimatedImage{
+        id:_arrow
+        source: "Images/global_arrowr.gif"
+        x: 105
+        y: 85
+        z: 50
+    }
+
     Component.onCompleted: {
         for (var i = 0; i < root.num; i++) {
             names.push(Qt.createQmlObject(
@@ -26,20 +35,20 @@ Item {
             names[i].chineseText = root.zhname[i]
             names[i].englishText = root.enname[i]
         }
-        for (i = 0; i < 23; i++) {
+        for (i = 0; i < root.num - 1; i++) {
             rails.push(Qt.createQmlObject(
                         'import QtQuick 2.0; Image { source: "Images/railnext.png"; }'
                         , this
                         , "rail" + i));
-            rails[i].x = i * 77 + 90;
+            rails[i].x = i * 77 + 85;
             rails[i].y = 80;
         }
-        for (i = 0; i < 24; i++) {
+        for (i = 0; i < root.num; i++) {
             sites.push(Qt.createQmlObject(
                         'import QtQuick 2.0; Image { source: "Images/statenextr.png"; }'
                         , this
                         , "site" + i));
-            sites[i].x = i * 77 + 70;
+            sites[i].x = i * 77 + 65;
             sites[i].y = 80;
             sites[i].z = 100;
         }
