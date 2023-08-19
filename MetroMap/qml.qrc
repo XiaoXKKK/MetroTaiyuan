@@ -48,5 +48,9 @@
         <file>Header.qml</file>
         <file>HorizontalText.qml</file>
         <file>VerticalText.qml</file>
+        <file>AllStation.qml</file>
+        <file>Welcome.qml</file>
+        <file>Images/welcome.png</file>
+        <file>Emergency.qml</file>
     </qresource>
 </RCC>

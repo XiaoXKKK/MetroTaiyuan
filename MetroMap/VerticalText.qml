@@ -15,6 +15,7 @@ Item {
     }
 
     Text {
+        id: zhtext
         text: verticalText(chineseText)
         font.family: "Microsoft YaHei"
         font.pointSize: chineseFontSize
@@ -31,5 +32,15 @@ Item {
             anchors.right:  parent.left
             anchors.top: parent.top
         }
+    }
+
+    function disable(){
+        zhtext.color = "grey"
+        entext.color = "grey"
+    }
+
+    function enable(){
+        zhtext.color = "black"
+        entext.color = "black"
     }
 }

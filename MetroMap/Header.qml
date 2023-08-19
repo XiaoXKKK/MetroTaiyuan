@@ -10,6 +10,37 @@ Item {
         asynchronous: true
     }
 
+    function updateStart(val){
+        start.chineseText = root.zhname[val]
+        start.englishText = root.enname[val]
+    }
+
+    function updateEnd(val){
+        end.chineseText = root.zhname[val]
+        end.englishText = root.enname[val]
+    }
+
+    function updateNext(val){
+        station.chineseText = root.zhname[val]
+        station.englishText = root.enname[val]
+    }
+
+    function updateDoor(val){
+        if(val){
+            dooropen.chineseText = "本侧开门"
+            dooropen.englishText = "This door open"
+            opendoor.visible = 1;
+            closedoor.visible = 0;
+        }
+        else{
+            dooropen.chineseText = "对侧开门"
+            dooropen.englishText = "Opposite door open"
+            opendoor.visible = 0;
+            closedoor.visible = 1;
+        }
+
+    }
+
     HorizontalText{
         id: start
         x: 550
@@ -63,6 +94,13 @@ Item {
         id: opendoor
         x: 1665; y:12
         source: "Images/tts-opendoor.gif"
+    }
+
+    Image {
+        id: closedoor
+        x: 1665; y:12
+        source: "Images/tts-closedoor.png"
+        visible: false
     }
 
     HorizontalText{
