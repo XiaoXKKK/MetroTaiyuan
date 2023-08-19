@@ -24,6 +24,20 @@ Item {
         z: 50
     }
 
+    function downstream(){
+        for (var i = 0; i < root.num; i++) {
+            names[i].chineseText = root.zhname[root.num - i - 1]
+            names[i].englishText = root.enname[root.num - i - 1]
+        }
+    }
+
+    function upstream(){
+        for (var i = 0; i < root.num; i++) {
+            names[i].chineseText = root.zhname[i]
+            names[i].englishText = root.enname[i]
+        }
+    }
+
     Component.onCompleted: {
         for (var i = 0; i < root.num; i++) {
             names.push(Qt.createQmlObject(

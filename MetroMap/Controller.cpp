@@ -67,7 +67,11 @@ void Controller::ReadReceive()
     _direction = ((flag>>7)&1);
     _pass = 0;
     memcpy(&_pass, _packet.dataSegment.flagPassStation, 6);
-//    qDebug()<<"pass="<<_pass;
+    qDebug()<<"pass="<<_pass;
+    qDebug()<<"start="<<_start;
+    qDebug()<<"end="<<_end;
+    qDebug()<<"now="<<_now;
+    qDebug()<<"next="<<_next;
     // bit0:越站有效 bit3:上下行有效 bit4:开右侧门 bit5:开左侧门 bit6:下行 bit7:上行
     emit dataChanged();
 }

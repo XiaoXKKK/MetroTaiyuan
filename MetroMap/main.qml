@@ -31,37 +31,79 @@ Window {
                 welcome.visible=false
                 allstation.visible=true
             }
-            for (var i = 0; i < num; i++){
-                if(i < start || i > end){
-                    allstation.names[i].disable();
-                    if(i < start)
+            if(direction){
+                allstation.upstream();
+                for (var i = 0; i < num; i++){
+                    if(i < start || i > end){
+                        allstation.names[i].disable();
+                        if(i < start)
+                            allstation.rails[i].source = "Images/railpass.png"
+                        else
+                            allstation.rails[i-1].source = "Images/railpass.png"
+                        allstation.sites[i].source = "Images/statenorun.png"
+                        continue;
+                    }
+                    if(i < next){
+                        allstation.names[i].disable();
                         allstation.rails[i].source = "Images/railpass.png"
-                    else
-                        allstation.rails[i-1].source = "Images/railpass.png"
-                    allstation.sites[i].source = "Images/statenorun.png"
-                    continue;
-                }
-                if(i < next){
-                    allstation.names[i].disable();
-                    allstation.rails[i].source = "Images/railpass.png"
-                    allstation.sites[i].source = "Images/statepassr.png"
-                }
-                else {
-                    if(i!==num-1)
+                        allstation.sites[i].source = "Images/statepassr.png"
+                    }
+                    else {
+                        if(i!==num-1)
+                            allstation.rails[i].source = "Images/railnext.png"
+                        allstation.sites[i].source = "Images/statenextr.png"
+                        allstation.names[i].enable();
+                    }
+                    if(i === now){
                         allstation.rails[i].source = "Images/railnext.png"
-                    allstation.sites[i].source = "Images/statenextr.png"
-                    allstation.names[i].enable();
-                }
-                if(i === now){
-                    allstation.rails[i].source = "Images/railnext.png"
-                    allstation.sites[i].source = "Images/statenow.png"
-                    allstation.arrow.x = i * 77 + 100;
-                }
-                if(pass >> i & 1){
-                    allstation.sites[i].source = "Images/statenorun.png"
-                    allstation.names[i].disable();
+                        allstation.sites[i].source = "Images/statenow.png"
+                        allstation.arrow.x = i * 77 + 100;
+                    }
+                    if(pass >> i & 1){
+                        allstation.sites[i].source = "Images/statenorun.png"
+                        allstation.names[i].disable();
+                    }
                 }
             }
+
+
+            else{
+                allstation.downstream();
+                for (var i = num - 1; i >= 0; i--){
+                    var pos = num - i - 1;
+                    if(i > start || i < end){
+                        allstation.names[pos].disable();
+                        if(i > start)
+                            allstation.rails[pos].source = "Images/railpass.png"
+                        else
+                            allstation.rails[pos-1].source = "Images/railpass.png"
+                        allstation.sites[pos].source = "Images/statenorun.png"
+                        continue;
+                    }
+                    if(i > next){
+                        allstation.names[pos].disable();
+                        allstation.rails[pos].source = "Images/railpass.png"
+                        allstation.sites[pos].source = "Images/statepassr.png"
+                    }
+                    else {
+                        if(i!==0)
+                            allstation.rails[pos].source = "Images/railnext.png"
+                        allstation.sites[pos].source = "Images/statenextr.png"
+                        allstation.names[pos].enable();
+                    }
+                    if(i === now){
+                        allstation.rails[pos].source = "Images/railnext.png"
+                        allstation.sites[pos].source = "Images/statenow.png"
+                        allstation.arrow.x = pos * 77 + 100;
+                    }
+                    if(pass >> i & 1){
+                        allstation.sites[pos].source = "Images/statenorun.png"
+                        allstation.names[pos].disable();
+                    }
+                }
+            }
+
+
 //            console.log(typeof pass)
             allstation.header.updateStart(start)
             allstation.header.updateEnd(end)
